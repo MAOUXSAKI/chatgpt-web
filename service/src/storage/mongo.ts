@@ -253,7 +253,7 @@ export async function createUser(email: string, password: string, roles?: UserRo
   const userInfo = new UserInfo(email, password)
   if (roles && roles.includes(UserRole.Admin))
     userInfo.status = Status.Normal
-  if (status !== null)
+  if (status != null)
     userInfo.status = status
 
   userInfo.roles = roles
